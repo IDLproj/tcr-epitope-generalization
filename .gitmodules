@@ -1,0 +1,3 @@
+[submodule "external/NetTCR-2.2"]
+	path = external/NetTCR-2.2
+	url = https://github.com/mnielLab/NetTCR-2.2.git
