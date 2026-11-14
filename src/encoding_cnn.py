@@ -7,7 +7,7 @@ AA_TO_IDX = {aa: i + 1 for i, aa in enumerate(AMINO_ACIDS)}
 
 #Maximum lengths for TCR beta chain CDR3 and peptide sequences
 MAXLEN_B3 = 23
-MAXLEN_PEP = 12
+MAXLEN_PEP = 16
 
 #Encodes a sequence of amino acids into a tensor of indices, padding to the specified maximum length
 def encode_sequence(sequence: str, max_length: int) -> torch.Tensor:
