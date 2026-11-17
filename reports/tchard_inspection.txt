@@ -1,0 +1,52 @@
+Reading tc-hard/ds.csv (55 MB uncompressed)
+566,218 rows x 14 columns
+columns: cdr3.alpha, cdr3.beta, mhc.a, antigen.epitope, v.alpha, j.alpha, v.beta, d.beta, j.beta, label, negative.source, license, mhc.seq, mhc.source
+
+COLUMN MAPPING  (maps TChard columns to expected names)
+  peptide                         antigen.epitope
+  B3                              cdr3.beta
+  binder                          label
+  negative scheme                 negative.source
+
+SUMMARY
+  distinct (peptide, B3) pairs    527,707
+  unique epitopes                 1,360
+  unique B3 sequences             197,850
+  positive rows (Binders)         151,958  (26.8%)
+  negative rows                   414,260  (73.2%)
+  negative to positive ratio      2.73 : 1
+
+NEGATIVE TYPES (How the negatives are generated)
+  randomized                      265,432  (64.1%)
+  nettcr-2.0                      146,880  (35.5%)
+  iedb                            992  (0.2%)
+  mira                            956  (0.2%)
+
+SEQUENCE LENGTHS
+  antigen.epitope                 min 7  p50 9  p99 16  max 16   limit 16   over limit 0
+  cdr3.beta                       min 9  p50 14  p99 19  max 23   limit 23   over limit 0
+
+DATA PROBLEMS
+  cdr3.beta bad residues          12 rows  (O, X)
+  identical rows                  0
+  duplicate (peptide, B3) rows    38,511
+  pairs with BOTH labels          313
+  B3 seen with both labels        128,745  of 197,850
+  cdr3.alpha missing              454,984
+  mhc.a missing                   120,244
+  v.alpha missing                 511,758
+  j.alpha missing                 514,567
+  v.beta missing                  427,610
+  d.beta missing                  528,241
+  j.beta missing                  430,967
+  negative.source missing         151,958
+  license missing                 412,457
+  mhc.seq missing                 130,817
+  mhc.source missing              454,529
+
+GATE: epitopes by minimum positive rows
+  >= 10                           407
+  >= 20                           323
+  >= 50                           219
+  >= 100                          157
+  >= 250                          81

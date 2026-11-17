@@ -1,0 +1,126 @@
+
+============================================================
+splits/tchard/NA/hard
+============================================================
+
+CLEANING (all should be 0)
+  rows with bad residues          0
+  pairs with conflicting labels   0
+  duplicate rows                  0
+  rows outside length limits      0
+  repeated row_id                 0
+
+NEGATIVES AND POSITIVES PER SPLIT
+  train                           71,850 pos (37%), 121,072 neg  nettcr-2.0 99%  mira 1%  iedb 0%
+  val                             30,896 pos (90%), 3,265 neg  nettcr-2.0 100%
+  test                            39,181 pos (95%), 2,067 neg  nettcr-2.0 66%  iedb 34%
+
+OVERLAP WITH TRAIN
+  val                             0 of 36 epitopes shared, 13% of B3 shared
+  test                            0 of 33 epitopes shared, 9% of B3 shared
+
+TEST EPITOPES PER SEED
+  seed0                           33
+  seed1                           25
+  seed2                           30
+  seed3                           23
+  seed4                           27
+  total points for the plot       138
+  distinct epitopes used          49
+
+============================================================
+splits/tchard/RN/hard
+============================================================
+
+CLEANING (all should be 0)
+  rows with bad residues          0
+  pairs with conflicting labels   0
+  duplicate rows                  0
+  rows outside length limits      0
+  repeated row_id                 0
+
+NEGATIVES AND POSITIVES PER SPLIT
+  train                           103,938 pos (36%), 182,844 neg  randomized 100%
+  val                             17,699 pos (33%), 36,008 neg  randomized 100%
+  test                            20,603 pos (34%), 40,311 neg  randomized 100%
+
+OVERLAP WITH TRAIN
+  val                             0 of 52 epitopes shared, 93% of B3 shared
+  test                            0 of 37 epitopes shared, 93% of B3 shared
+
+TEST EPITOPES PER SEED
+  seed0                           37
+  seed1                           30
+  seed2                           22
+  seed3                           34
+  seed4                           34
+  total points for the plot       157
+  distinct epitopes used          87
+
+============================================================
+splits/tchard/RN/random
+============================================================
+
+CLEANING (all should be 0)
+  rows with bad residues          0
+  pairs with conflicting labels   0
+  duplicate rows                  0
+  rows outside length limits      0
+  repeated row_id                 0
+
+NEGATIVES AND POSITIVES PER SPLIT
+  train                           99,485 pos (35%), 181,498 neg  randomized 100%
+  val                             21,428 pos (36%), 38,782 neg  randomized 100%
+  test                            21,327 pos (35%), 38,883 neg  randomized 100%
+
+OVERLAP WITH TRAIN
+  val                             974 of 988 epitopes shared, 91% of B3 shared
+  test                            946 of 961 epitopes shared, 91% of B3 shared
+
+TEST EPITOPES PER SEED
+  seed0                           961
+  seed1                           962
+  seed2                           953
+  seed3                           970
+  seed4                           973
+  total points for the plot       4819
+  distinct epitopes used          1309
+
+============================================================
+splits/tchard/full/hard
+============================================================
+
+CLEANING (all should be 0)
+  rows with bad residues          0
+  pairs with conflicting labels   0
+  duplicate rows                  0
+  rows outside length limits      0
+  repeated row_id                 0
+
+NEGATIVES AND POSITIVES PER SPLIT
+  train                           91,522 pos (24%), 283,185 neg  randomized 57%  nettcr-2.0 42%  mira 0%  iedb 0%
+  val                             21,231 pos (32%), 45,015 neg  randomized 92%  nettcr-2.0 8%
+  test                            29,174 pos (34%), 57,255 neg  randomized 98%  nettcr-2.0 2%
+
+OVERLAP WITH TRAIN
+  val                             0 of 55 epitopes shared, 89% of B3 shared
+  test                            0 of 40 epitopes shared, 90% of B3 shared
+
+TEST EPITOPES PER SEED
+  seed0                           40
+  seed1                           39
+  seed2                           35
+  seed3                           45
+  seed4                           43
+  total points for the plot       202
+  distinct epitopes used          98
+
+============================================================
+
+CHECK IF THE SPLITS HOLD THE SAME EPITOPES
+  NA vs RN                        6 shared of 64
+  NA vs full                      13 shared of 60
+  RN vs full                      21 shared of 56
+
+  Low overlap means an RN vs NA score gap is partly a
+  different test set, not only different negatives.

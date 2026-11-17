@@ -217,6 +217,10 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 data/raw/
-reports/
+
+.DS_Store
+**/.DS_Store
+
 data/raw/
 splits/tchard/**/*.csv
+
