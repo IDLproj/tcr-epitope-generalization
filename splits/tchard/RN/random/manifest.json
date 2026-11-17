@@ -1,0 +1,186 @@
+{
+  "params": {
+    "input": "data/raw/tc-hard.zip",
+    "out_root": "splits/tchard",
+    "neg_mode": "RN",
+    "split_type": "random",
+    "label_policy": "drop",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "test_ratio": 0.15,
+    "val_ratio": 0.15,
+    "low": 500,
+    "high": 10000,
+    "val_low": 250,
+    "val_high": 10000
+  },
+  "n_clean_rows": 401403,
+  "n_clean_epitopes": 1360,
+  "seeds": {
+    "0": {
+      "stats": [
+        {
+          "split": "train",
+          "n_rows": 280983,
+          "n_pos": 99485,
+          "pos_frac": 0.3541,
+          "n_epitopes": 1343,
+          "n_b3": 126448
+        },
+        {
+          "split": "val",
+          "n_rows": 60210,
+          "n_pos": 21428,
+          "pos_frac": 0.3559,
+          "n_epitopes": 988,
+          "n_b3": 50168
+        },
+        {
+          "split": "test",
+          "n_rows": 60210,
+          "n_pos": 21327,
+          "pos_frac": 0.3542,
+          "n_epitopes": 961,
+          "n_b3": 50096
+        }
+      ],
+      "test_epitopes": [],
+      "val_epitopes": [],
+      "actual_test_frac": 0.15,
+      "actual_val_frac": 0.15
+    },
+    "1": {
+      "stats": [
+        {
+          "split": "train",
+          "n_rows": 280983,
+          "n_pos": 99634,
+          "pos_frac": 0.3546,
+          "n_epitopes": 1345,
+          "n_b3": 126519
+        },
+        {
+          "split": "val",
+          "n_rows": 60210,
+          "n_pos": 21319,
+          "pos_frac": 0.3541,
+          "n_epitopes": 971,
+          "n_b3": 50123
+        },
+        {
+          "split": "test",
+          "n_rows": 60210,
+          "n_pos": 21287,
+          "pos_frac": 0.3535,
+          "n_epitopes": 962,
+          "n_b3": 50314
+        }
+      ],
+      "test_epitopes": [],
+      "val_epitopes": [],
+      "actual_test_frac": 0.15,
+      "actual_val_frac": 0.15
+    },
+    "2": {
+      "stats": [
+        {
+          "split": "train",
+          "n_rows": 280983,
+          "n_pos": 99740,
+          "pos_frac": 0.355,
+          "n_epitopes": 1350,
+          "n_b3": 126393
+        },
+        {
+          "split": "val",
+          "n_rows": 60210,
+          "n_pos": 21394,
+          "pos_frac": 0.3553,
+          "n_epitopes": 969,
+          "n_b3": 50006
+        },
+        {
+          "split": "test",
+          "n_rows": 60210,
+          "n_pos": 21106,
+          "pos_frac": 0.3505,
+          "n_epitopes": 953,
+          "n_b3": 50180
+        }
+      ],
+      "test_epitopes": [],
+      "val_epitopes": [],
+      "actual_test_frac": 0.15,
+      "actual_val_frac": 0.15
+    },
+    "3": {
+      "stats": [
+        {
+          "split": "train",
+          "n_rows": 280983,
+          "n_pos": 99632,
+          "pos_frac": 0.3546,
+          "n_epitopes": 1351,
+          "n_b3": 126434
+        },
+        {
+          "split": "val",
+          "n_rows": 60210,
+          "n_pos": 21399,
+          "pos_frac": 0.3554,
+          "n_epitopes": 969,
+          "n_b3": 50098
+        },
+        {
+          "split": "test",
+          "n_rows": 60210,
+          "n_pos": 21209,
+          "pos_frac": 0.3523,
+          "n_epitopes": 970,
+          "n_b3": 50112
+        }
+      ],
+      "test_epitopes": [],
+      "val_epitopes": [],
+      "actual_test_frac": 0.15,
+      "actual_val_frac": 0.15
+    },
+    "4": {
+      "stats": [
+        {
+          "split": "train",
+          "n_rows": 280983,
+          "n_pos": 99272,
+          "pos_frac": 0.3533,
+          "n_epitopes": 1354,
+          "n_b3": 126397
+        },
+        {
+          "split": "val",
+          "n_rows": 60210,
+          "n_pos": 21441,
+          "pos_frac": 0.3561,
+          "n_epitopes": 977,
+          "n_b3": 50171
+        },
+        {
+          "split": "test",
+          "n_rows": 60210,
+          "n_pos": 21527,
+          "pos_frac": 0.3575,
+          "n_epitopes": 973,
+          "n_b3": 49978
+        }
+      ],
+      "test_epitopes": [],
+      "val_epitopes": [],
+      "actual_test_frac": 0.15,
+      "actual_val_frac": 0.15
+    }
+  }
+}
