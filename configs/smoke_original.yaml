@@ -1,0 +1,27 @@
+model:
+  embedding_dim: 16
+  num_filters: 64
+  kernel_size: 3
+  hidden_dim: 64
+  dropout: 0.3
+  ablate: null
+
+training:
+  batch_size: 64
+  epochs: 1
+  learning_rate: 0.001
+  patience: 1
+  weight_decay: 0.0001
+  seed: 8
+
+data:
+  maxlen_b3: 23
+  maxlen_pep: 16
+  train_path: splits/tchard/RN/hard/seed0/train.csv
+  val_path:   splits/tchard/RN/hard/seed0/val.csv
+  test_path:  splits/tchard/RN/hard/seed0/test.csv
+
+output:
+  checkpoint:     results/smoke/original.pt
+  predictions:    results/smoke/original.csv
+  learning_curve: results/smoke/original.png

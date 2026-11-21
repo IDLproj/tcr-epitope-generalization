@@ -220,3 +220,4 @@ data/raw/
 reports/
 data/raw/
 splits/tchard/**/*.csv
+results/smoke/

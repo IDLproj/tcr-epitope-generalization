@@ -14,6 +14,12 @@ from .encoding_cnn import (
     MAXLEN_PEP,
 )
 
+SETTING_NAMES = {
+    None: "full",
+    "peptide": "receptor_only",
+    "tcr": "peptide_only",
+}
+
 
 # --------------------------------------------------
 # 1. Dataset
@@ -113,6 +119,7 @@ class DualBranchCNN(nn.Module):
         kernel_size=3,
         hidden_dim=64,
         dropout=0.3,
+        ablate=None
     ):
         super().__init__()
 
@@ -134,11 +141,16 @@ class DualBranchCNN(nn.Module):
             nn.Dropout(dropout),
             nn.Linear(hidden_dim, 1),
         )
+        self.ablate = ablate
 
     def forward(self, tcr, peptide):
         tcr_features = self.tcr_encoder(tcr)
         peptide_features = self.peptide_encoder(peptide)
 
+        if self.ablate == "peptide":
+            peptide_features = torch.zeros_like(peptide_features)
+        elif self.ablate == "tcr":
+            tcr_features = torch.zeros_like(tcr_features)
         combined = torch.cat(
             [tcr_features, peptide_features],
             dim=1,

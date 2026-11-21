@@ -19,6 +19,11 @@ from src.cnn import (
     predict,
 )
 
+SETTING_NAMES = {
+    None: "full",
+    "peptide": "receptor_only",
+    "tcr": "peptide_only",
+}
 
 # --------------------------------------------------
 # 1. Configuration
@@ -121,7 +126,7 @@ def save_learning_curve(history, output_path):
 # 4. Save predictions
 # --------------------------------------------------
 
-def save_predictions(test_df, probabilities, output_path):
+def save_predictions(test_df, probabilities, output_path, setting="full"):
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -138,7 +143,7 @@ def save_predictions(test_df, probabilities, output_path):
 
     predictions_df["pred"] = probabilities
     predictions_df["model"] = "dual_branch_cnn"
-    predictions_df["setting"] = "baseline"
+    predictions_df["setting"] = setting
 
     predictions_df.to_csv(output_path, index=False)
 
@@ -268,6 +273,7 @@ def main():
         test_df,
         probabilities,
         config["output"]["predictions"],
+        setting=SETTING_NAMES[config["model"].get("ablate")],
     )
 
     
